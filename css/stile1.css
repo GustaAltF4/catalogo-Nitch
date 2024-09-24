@@ -298,6 +298,14 @@ box{
     #tituloPrincipal{
         font-size: 4vh;
     }
+    .fancybox-active {
+        width: 100%;
+        height: 100%;
+    }
+    .fancybox img {
+        max-width: 100%;
+        height: 100%;
+    }
 
 }
 .carousel-item {

@@ -1,15 +1,15 @@
 const images= [
-    "garg 1.jpg",
-    "garg 2.png",
-    "garg 3.png",
-    "garg 4.png",
-    "garg 5.jpg",
-    "garg 6.png",
-    "garg 7.jpg",
-    "garg 8.jpg",
-    "garg 9.jpg",
-    "garg 10.png",
-    "garg 11.png",
+    "garg 1.webp",
+    "garg 2.webp",
+    "garg 3.webp",
+    "garg 4.webp",
+    "garg 5.webp",
+    "garg 6.webp",
+    "garg 7.webp",
+    "garg 8.webp",
+    "garg 9.webp",
+    "garg 10.webp",
+    "garg 11.webp",
 ]
 
 const cardContainer = document.getElementById("cardContainer");
