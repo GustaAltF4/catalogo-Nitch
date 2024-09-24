@@ -1,0 +1,370 @@
+body{
+    background: #2c212a;
+ 
+    color: #fff;
+}
+.bg-dark {
+    background-color: #000 !important; /* O cualquier otro color que desees */
+}
+#navbar{
+    background-color: #2c212a;
+}
+.cursiva{
+    font-family: 'Great Vibes', 
+    cursive; font-size: 4vh;
+    text-decoration: none;
+    color: #fff;
+}
+.btn-custom{
+    background-color: #000;
+    color: darkorchid;
+    font-size: x-large;
+    transition: all 2s ease;
+}
+.btn-custom:hover{
+    font-size: x-large;
+    background-color: darkorchid;
+    color: #000;
+}
+.card{
+    background: #2c212a;
+    border: none;
+    position: relative;
+    width: 40vh;
+    padding: 0;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10%;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.card::before{
+    position: absolute;
+    top: -50%;
+    left: 30%;
+    content: '';
+    width: 50%;
+    height: 200%;
+    /* background: rgba(255, 254, 254, 0.3); */
+    background: rgb(0, 0, 0);
+    transform: rotate(45deg);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 
+                0 0 40px rgba(255, 255, 255, 0.6), 
+                0 0 60px rgba(255, 255, 255, 0.8);
+    
+}
+.card:hover::before{
+    animation: animate2 10s linear infinite;
+}
+@keyframes animate2{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Estilos específicos para móviles */
+@media (max-width: 767px) {
+    .card::before {
+        animation: none; /* Por defecto, no se anima */
+    }
+    .card.center::before {
+        animation: animate2 10s linear infinite; /* Solo se anima cuando tiene la clase 'center' */
+    }
+}
+
+
+.card-a{
+    
+    width: 96%;
+    height: 97%;
+    z-index: 10;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 9%;
+}
+.card-title {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3); /* Color de fondo del círculo */
+    padding: 1vh ; /* Espaciado interno para el círculo */
+    border-radius: 50%; /* Hace que el contorno sea redondeado */
+    display: inline-block; /* Asegura que el contenedor tenga un tamaño adecuado */
+    
+}
+.card-title2 {
+    position: relative;
+    top: 4%;
+    left: 35%;
+    color: white;
+    font-size: xx-large;
+    background-color: rgba(0, 0, 0, 0.3); /* Color de fondo del círculo */
+    padding: 1vh ; /* Espaciado interno para el círculo */
+    border-radius: 50%; /* Hace que el contorno sea redondeado */
+    display: inline-block; /* Asegura que el contenedor tenga un tamaño adecuado */
+    
+}
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+
+
+}
+box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 1000ms ease;
+}
+.red-social a:hover{
+    color: darkorchid;   
+   
+}
+
+.navbar-links a{
+    
+    color: rgb(211, 202, 202);
+    text-decoration: none;
+    transition: all 1s ease;
+    border-bottom: 4px solid transparent;
+}
+
+.navbar-links a:hover{
+    color: darkorchid;
+    border-bottom: 4px solid darkorchid;
+}
+
+/* ..................... */
+/* Ocultar el checkbox real */
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    
+}
+
+/* Estilo del contenedor del checkbox */
+.custom-checkbox {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    padding-left: 30px; /* Espacio para el checkbox */
+    margin-top: 10px;
+    padding: 5px 10px; /* Aumenta el área clickeable */
+    border-radius: 5px;
+    z-index: 11; /* Asegura que el checkbox esté por encima del enlace */
+    bottom: 25px;
+    right: 15px;
+    position: absolute; /* Alinea el checkbox en la esquina inferior derecha */
+}
+
+/* Estilo del checkbox personalizado */
+.custom-checkbox .checkmark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 25px;
+    width: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+/* Cambiar el color cuando se selecciona */
+.custom-checkbox input:checked + .checkmark {
+    background-color: darkorchid;
+}
+
+/* Añadir una marca de verificación */
+.custom-checkbox .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 10px;
+    top: 6px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Mostrar la marca cuando está seleccionado */
+.custom-checkbox input:checked + .checkmark:after {
+    display: block;
+}
+
+.btn-comprar{
+    position: fixed;
+    font-size: x-large;
+    left: 20px;               /* Posición a la orilla izquierda de la pantalla */
+    bottom: 30px;          /* A 20px desde el fondo de la pantalla */
+    padding: 10px 20px;    /* Tamaño del botón */
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo del botón */
+    color: rgb( 153,50,204);          /* Color del texto */
+    border: none;          /* Sin borde */
+    border-radius: 50%;    /* Bordes redondeados */
+    cursor: pointer;       /* Mostrar el puntero al pasar el mouse */
+    z-index: 1000;
+    transition: all 1000ms ease; 
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000; 
+}
+.btn-comprar:hover{
+    background-color: darkorchid;
+    color: #000;
+    text-shadow: none;
+}
+.custom-tooltip {
+    --bs-tooltip-bg: var(--bd-primary-rgb);
+    --bs-tooltip-color: var(--bs-white);
+}
+
+.contenedor-pregunta{
+    position: absolute;
+    top: 20%;
+    left: 80%;   
+}
+.custom-tooltip {
+    background-color: rgba(44, 33, 42, 0.9); /* Fondo personalizado */
+    color: #fff; /* Texto blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado */
+    font-size: 14px; /* Tamaño de fuente */
+    max-width: 200px; /* Ancho máximo */
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .display-3{
+        font-size: 2vh;
+        padding: 2vh;
+    }
+    .contenedor-pregunta{
+        position: absolute;
+        top: 14%;
+        left: 75%;   
+    }
+    .btn-custom{
+        width: 10vh;
+        font-size: small;
+    }
+    #btn-preg2{
+        width: 12vh;
+    }
+    .btn-custom:hover{
+        width: 10vh;
+        font-size: small;
+    }
+    .red-social{
+        width: 5vh;
+        height: 5vh;
+    }
+    .card-title2{
+        top: 1%;
+        left: 2%; 
+    }
+    #tituloPrincipal{
+        font-size: 4vh;
+    }
+
+}
+.carousel-item {
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+.accordion-collapse {
+    transition: height 1s ease;
+    
+}
+.accordion-header button{
+    background-color: #000000;
+    color: white;
+    transition: all 2s ease;
+
+}
+.accordion-item{
+    background-color: #272424;
+    color: white;
+}
+
+
+.animated-btn {
+    position: relative;
+    overflow: hidden;
+    color: white;
+    background: none;
+    border: 2px solid white;
+    z-index: 1;
+    transition: color 0.5s ease-in-out;
+}
+
+.animated-btn::before {
+content: "";
+position: absolute;
+top: 0;
+left: -50%;
+width: 200%;
+height: 100%;
+background: linear-gradient(270deg, rgba(255, 255, 255, 0.0), rgba(212, 112, 217, 0.3), rgba(255, 255, 255, 0.0));
+z-index: -1;
+transition: transform 0.5s ease;
+animation: move-background 7s infinite linear;
+}
+
+@keyframes move-background {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.animated-btn:hover {
+color: orchid;
+}
+
+.animated-btn:hover::before {
+transform: translateX(0);
+}
+
+#tituloPrincipal{
+    background: linear-gradient(to right, darkorchid 30%, white 70%);
+    padding: 5px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;   
+}
+
+  
