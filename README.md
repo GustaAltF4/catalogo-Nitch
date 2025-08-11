@@ -1,4 +1,4 @@
-#‼️hice una nueva version con react‼️
+‼️**Realize nueva version con react**‼️
 [Repositorio](https://github.com/GustaAltF4/React-Practicas/tree/main/6.2%20-%20Arneses/arneses)
 
 # My First web static
